@@ -10,4 +10,4 @@ spring:
     password: pass
     url: jdbc:postgresql://localhost:5432/springboot
   profiles:
-    active: simple
+    active: distributed-aop-async-event

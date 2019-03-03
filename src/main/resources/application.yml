@@ -2,3 +2,12 @@ mybatis:
   type-aliases-package: com.parfait.study.simpleevent.model
   configuration:
     map-underscore-to-camel-case: true
+
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: pass
+    url: jdbc:postgresql://localhost:5432/springboot
+  profiles:
+    active: simple

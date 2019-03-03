@@ -10,7 +10,7 @@ import org.apache.ibatis.annotations.SelectKey;
 public interface MemberMapper {
 
     @Insert("INSERT INTO member(name, email, phone_no) VALUES (#{name}, #{email}, #{phoneNo})")
-    @SelectKey(statement = "CALL SCOPE_IDENTITY()", resultType = Long.class, keyProperty = "id", before = false)
+    @SelectKey(statement = "SELECT currval('member_sequence')", resultType = Long.class, keyProperty = "id", before = false)
     int insert(Member member);
 
     @Select("SELECT count(1) FROM member")
